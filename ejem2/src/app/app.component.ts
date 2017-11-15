@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
   		<li>Director: {{director}}</li>
   		<li>Año: {{anio}}</li>
   	</ul>
+    <h2> Prueba para Github</h2>
+
   `,
   styleUrls: ['./app.component.css']
 })
