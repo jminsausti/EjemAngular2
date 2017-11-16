@@ -14,7 +14,6 @@ import { Component } from '@angular/core';
     <h2> Prueba para Github</h2>
 
   `,
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   public titulo = "Ejemplo 2 Binding";
