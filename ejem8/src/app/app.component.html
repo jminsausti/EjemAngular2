@@ -1,0 +1,14 @@
+<h1>{{titulo}}</h1> 
+<img [src]="imgUrl"/>
+
+<hr>
+<button (click)="mostrarOcultar(true)" [class.mostrando]="mostrarDatos">Mostrar Datos</button>  
+<button (click)="mostrarOcultar(false)" [class.mostrando]="!mostrarDatos">Ocultar datos</button>     
+<p><strong>Películas</strong></p>
+<ul *ngIf="mostrarDatos">
+  <li>Título: {{pelicula.titulo}}</li>
+  <li>Director: {{pelicula.director}}</li>
+  <li>Año: {{pelicula.anio}}</li>
+  
+</ul>
+<p></p>
