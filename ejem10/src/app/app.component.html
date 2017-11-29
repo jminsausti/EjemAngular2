@@ -1,0 +1,26 @@
+<h1>{{cabecera}}</h1> 
+<p>Película favorita</p>
+
+<hr>
+<button (click)="mostrarOcultar(true)" [class.mostrando]="mostrarDatos">Mostrar Datos</button>  
+<button (click)="mostrarOcultar(false)" [class.mostrando]="!mostrarDatos">Ocultar datos</button>     
+<p><strong>Películas</strong></p>
+<ul *ngIf="mostrarDatos">
+  <li>Título: {{pelicula.titulo}}</li>
+  <li>Director: {{pelicula.director}}</li>
+  <li>Año: {{pelicula.anio}}</li>
+  
+</ul>
+<p>
+	<input type="text"  (keypress)=debug();   [(ngModel)]="cabecera"/>Cambiar Cabecera
+</p>
+
+<hr>
+<p>Listado de Películas</p>
+<ul>
+	<ul *ngFor="let pelicula of peliculas" style="margin-bottom: 10px">
+		<li>Título: {{pelicula.titulo}}</li>
+ 		<li>Director: {{pelicula.director}}</li>
+  		<li *ngIf="pelicula.anio">Año: {{pelicula.anio}}</li>
+	</ul>
+</ul>

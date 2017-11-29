@@ -1,0 +1,23 @@
+h1{
+	font-family: Arial, Helvetica;
+	color: #444;
+	text-decoration: underline;
+	line-height: 20px;
+}
+
+.mostrando{
+	display: none;
+}
+
+.pelicula-titulo{
+	cursor: pointer;
+}
+
+.pelicula-titulo:hover{
+	text-decoration: underline;
+}
+.clikado{
+	font-size: 20px;
+	color: green;
+	font-family: arial;
+}

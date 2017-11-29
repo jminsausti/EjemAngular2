@@ -1,0 +1,28 @@
+<p>PELICUKAS LIST COMPO__NENT</p>
+
+
+<h2>Película favorita{{cabecera}}</h2>
+
+<hr>
+<button (click)="mostrarOcultar(true)" [class.mostrando]="mostrarDatos">Mostrar Datos</button>  
+<button (click)="mostrarOcultar(false)" [class.mostrando]="!mostrarDatos">Ocultar datos</button>     
+<p><strong>Películas</strong></p>
+<ul *ngIf="mostrarDatos">
+  <li>Título: {{pelicula.titulo}}</li>
+  <li>Director: {{pelicula.director}}</li>
+  <li>Año: {{pelicula.anio}}</li>
+  
+</ul>
+<p>
+	<input type="text"  (keypress)=debugg();   [(ngModel)]="cabecera"/>Cambiar Cabecera
+</p>
+
+<hr>
+<p>Listado de Películas</p>
+<ul>
+	<ul *ngFor="let pelicula of peliculas" style="margin-bottom: 10px">
+		<li>Título: {{pelicula.titulo}}</li>
+ 		<li>Director: {{pelicula.director}}</li>
+  		<li *ngIf="pelicula.anio">Año: {{pelicula.anio}}</li>
+	</ul>
+</ul>
