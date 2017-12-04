@@ -2,8 +2,8 @@
 <img [src]="imgUrl"/>
 
 <hr>
-<button (click)="mostrarOcultar(true)" [class.mostrando]="mostrarDatos">Mostrar Datos</button>  
-<button (click)="mostrarOcultar(false)" [class.mostrando]="!mostrarDatos">Ocultar datos</button>     
+<button (click)="mostrarOcultar(true)" [class.ocultar]="mostrarDatos">Mostrar Datos</button>  
+<button (click)="mostrarOcultar(false)" [class.ocultar]="!mostrarDatos">Ocultar datos</button>     
 <p><strong>Películas</strong></p>
 <ul *ngIf="mostrarDatos">
   <li>Título: {{pelicula.titulo}}</li>
